@@ -9,11 +9,6 @@ await agent.login({
   password: process.env.BSKY_PASSWORD!,
 });
 
-const tl = await agent.getTimeline();
-console.log(
-  tl.data.feed.map(
-    (item) =>
-      // @ts-ignore
-      item.post.record.text,
-  ),
-);
+await agent.post({
+  text: "test",
+});
