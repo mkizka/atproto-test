@@ -1,0 +1,27 @@
+{
+  "name": "typescript-template",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write . && eslint --fix .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@mkizka/eslint-config": "*",
+    "eslint": "*",
+    "husky": "*",
+    "lint-staged": "*",
+    "prettier": "*",
+    "prettier-plugin-pkg": "*"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --ignore-unknown --write",
+      "eslint --fix"
+    ]
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-pkg"
+    ]
+  }
+}
