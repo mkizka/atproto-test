@@ -1,35 +1,38 @@
 {
-  "name": "typescript-template",
+  "name": "atproto-test",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "format": "prettier --write . && eslint --fix .",
-    "prepare": "husky",
-    "start": "dotenv -- tsx src/index.ts"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@atproto/api": "^0.12.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@mkizka/eslint-config": "^4.1.0",
-    "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.12.7",
-    "dotenv-cli": "^7.4.1",
-    "eslint": "^9.0.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
-    "prettier-plugin-pkg": "^0.18.1",
-    "tsx": "^4.7.2"
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
   },
   "lint-staged": {
     "*": [
       "prettier --ignore-unknown --write",
       "eslint --fix"
-    ]
-  },
-  "prettier": {
-    "plugins": [
-      "prettier-plugin-pkg"
     ]
   }
 }

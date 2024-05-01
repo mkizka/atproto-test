@@ -1,4 +1,4 @@
-import { BskyAgent } from "@atproto/api";
+import { AtpAgent, BskyAgent } from "@atproto/api";
 
 const agent = new BskyAgent({
   service: "https://bsky.social",
@@ -9,6 +9,8 @@ await agent.login({
   password: process.env.BSKY_PASSWORD!,
 });
 
-await agent.post({
-  text: "test",
-});
+const posts = await agent.getAuthorFeed({
+  actor: "mkizka.dev"
+})
+
+console.log(posts)
