@@ -1,20 +1,23 @@
 {
   "name": "atproto-test",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
+    "dev": "vite",
+    "format": "prettier --write . && eslint --fix .",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "preview": "vite preview"
   },
   "dependencies": {
+    "@atproto/api": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@mkizka/eslint-config": "^4.2.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
@@ -26,6 +29,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "prettier-plugin-pkg": "^0.18.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   },
@@ -33,6 +37,11 @@
     "*": [
       "prettier --ignore-unknown --write",
       "eslint --fix"
+    ]
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-pkg"
     ]
   }
 }
