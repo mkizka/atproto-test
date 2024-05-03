@@ -1,7 +1,7 @@
 import { AtpAgent } from "@atproto/api";
 
 const agent = new AtpAgent({
-  service: "https://bsky.social",
+  service: "https://pds.unsocial.dev",
 });
 
 const string = (value: unknown) => {

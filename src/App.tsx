@@ -13,8 +13,8 @@ function App() {
   const handleClick = () => {
     void agent.com.atproto.repo
       .listRecords({
-        collection: "app.bsky.actor.profile",
-        repo: "mkizka.dev",
+        collection: "dev.unsocial.pds.test",
+        repo: "compeito.pds.unsocial.dev",
       })
       .then(console.log);
   };
