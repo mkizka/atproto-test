@@ -1,5 +1,6 @@
 import "./App.css";
 
+import { TID } from "@atproto/common-web";
 import { useState } from "react";
 
 import viteLogo from "/vite.svg";
@@ -12,9 +13,14 @@ function App() {
 
   const handleClick = () => {
     void agent.com.atproto.repo
-      .listRecords({
+      .putRecord({
         collection: "dev.unsocial.pds.test",
         repo: "compeito.pds.unsocial.dev",
+        rkey: TID.next().str,
+        record: {
+          timestamp: new Date().toISOString(),
+        },
+        validate: false,
       })
       .then(console.log);
   };
