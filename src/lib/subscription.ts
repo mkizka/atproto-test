@@ -1,6 +1,6 @@
-import { ids, lexicons } from "@atproto/bsky/dist/lexicon/lexicons";
-import type { OutputSchema as RepoEvent } from "@atproto/bsky/dist/lexicon/types/com/atproto/sync/subscribeRepos";
-import { isCommit } from "@atproto/bsky/dist/lexicon/types/com/atproto/sync/subscribeRepos";
+import { ids, lexicons } from "@atproto/bsky/dist/lexicon/lexicons.js";
+import type { OutputSchema as RepoEvent } from "@atproto/bsky/dist/lexicon/types/com/atproto/sync/subscribeRepos.js";
+import { isCommit } from "@atproto/bsky/dist/lexicon/types/com/atproto/sync/subscribeRepos.js";
 import { cborToLexRecord, readCar } from "@atproto/repo";
 import { Subscription } from "@atproto/xrpc-server";
 
